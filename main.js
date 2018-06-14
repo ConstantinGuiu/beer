@@ -26,7 +26,7 @@ function getInfo(){
 
     // I USED JSON.parse() TO TRANSFORM THE DATA INTO A JASON
     let info = JSON.parse(FooBar.getData(true));
-    // console.log(info);
+    console.log(info);
     
     // SHOWING THE QUEUE
 
@@ -109,14 +109,12 @@ function getInfo(){
                 spent35++;
             }
 
-            console.log(spent0and5, spent5and15, spent15and35, spent35);
+            // console.log(spent0and5, spent5and15, spent15and35, spent35);
 
             document.querySelector("#lessThan5 span").textContent = spent0and5;
             document.querySelector("#between5and15 span").textContent = spent5and15;
             document.querySelector("#between15and35 span").textContent = spent15and35;
             document.querySelector("#aLot span").textContent = spent35;
-
-
 
             ids.push(customerID);
             topBeer.order.forEach(beer=>{
@@ -151,19 +149,8 @@ function getInfo(){
                 else if(beer == "Steampunk"){
                     steamBeer++;
                 }
-                
             })
         }
-        // console.log("hefe:", hefeBeer);
-        // console.log("fairy:", fairyBeer);
-        // console.log("git:", gitBeer);
-        // console.log("holla:", hollaBeer);
-        // console.log("hoppi:", hoppiBeer);
-        // console.log("mowin:", mowinBeer);
-        // console.log("row:", rowBeer);
-        // console.log("ruin:", ruinBeer);
-        // console.log("sleigh:", sleighBeer);
-        // console.log("steam:", steamBeer);
         
         beerNameArray = ['El Hefe', 'Fairy Tale Ale', 'GitHop', 'Hollaback Lager', 'Hoppily Ever After', 'Mowintime', 'Row 26', 'Ruined Childhood', 'Sleighride', 'Steampunk'];
         beerSoldArray = [hefeBeer, fairyBeer, gitBeer, hollaBeer, hoppiBeer, mowinBeer, rowBeer, ruinBeer, sleighBeer, steamBeer];
@@ -198,22 +185,6 @@ function getInfo(){
             beerQuantityPercentage.textContent = beerPercentage;
             parentTop.appendChild(cloneTop);
         })
-       
-
-
-        // let hefePercent = 100 / (beerSold / hefeBeer);
-        // let fairyPercent = 100 / (beerSold / fairyBeer);
-        // let gitPercent = 100 / (beerSold / gitBeer);
-        // let hollaPercent = 100 / (beerSold / hollaBeer);
-        // let hoppiPercent = 100 / (beerSold / hoppiBeer);
-        // let mowinPercent = 100 / (beerSold / mowinBeer);
-        // let rowPercent = 100 / (beerSold / rowBeer);
-        // let ruinPercent = 100 / (beerSold / ruinBeer);
-        // let sleighPercent = 100 / (beerSold / sleighBeer);
-        // let steamPercent = 100 / (beerSold / steamBeer);
-
-
     })
 
 }
-
