@@ -90,6 +90,7 @@ function getInfo(){
         let q = ids.indexOf(customerID);
         if (q < 0){
             
+            ids.push(customerID);
             let timeServed = info.timestamp;
             let timeStartQueue = topBeer.startTime;
             let timeSpent = ((timeServed - timeStartQueue)/1000).toFixed(0);
@@ -116,7 +117,6 @@ function getInfo(){
             document.querySelector("#between15and35 span").textContent = spent15and35;
             document.querySelector("#aLot span").textContent = spent35;
 
-            ids.push(customerID);
             topBeer.order.forEach(beer=>{
 
                 if(beer == "El Hefe"){
