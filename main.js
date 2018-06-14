@@ -179,10 +179,10 @@ function getInfo(){
             const cloneTop = templateTop.cloneNode(true);
             let beerNameTop = cloneTop.querySelector('.beerNameSpan');
             let beerQuantityTop = cloneTop.querySelector('.beersSoldSpan');
-            let beerQuantityPercentage = cloneTop.querySelector(".beerPercentageSpan");
+            // let beerQuantityPercentage = cloneTop.querySelector(".beerPercentageSpan");
             let beerTopBar = cloneTop.querySelector('.topBar');
             let beerPercentageTotal = (100 / (mostSold / quantityOfBeer)).toFixed(2);
-            let beerPercentage = (100 / (beerSold / quantityOfBeer)).toFixed(2);
+            // let beerPercentage = (100 / (beerSold / quantityOfBeer)).toFixed(2);
             // toFixed IS USED TO GET ONLY 2 DECIMALS, NOT 1000
    
             beerTopBar.style.width = `${beerPercentageTotal}%`;
