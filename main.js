@@ -17,6 +17,7 @@ let spent0and5 = 0;
 let spent5and15 = 0;
 let spent15and35 = 0;
 let spent35 = 0;
+let mostSold = 0;
 
 let layer = document.querySelector("#toplayer");
 
@@ -157,7 +158,11 @@ function getInfo(){
         let beerSold = 0;
         for (var i = 0; i < beerSoldArray.length; i++) {
             beerSold += beerSoldArray[i];
+            if (mostSold < beerSoldArray[i]){
+                mostSold = beerSoldArray[i];
+            }
         }
+
         // console.log(beerSold);
 
         document.querySelector('#beersSold span').textContent = beerSold;
@@ -176,13 +181,14 @@ function getInfo(){
             let beerQuantityTop = cloneTop.querySelector('.beersSoldSpan');
             let beerQuantityPercentage = cloneTop.querySelector(".beerPercentageSpan");
             let beerTopBar = cloneTop.querySelector('.topBar');
+            let beerPercentageTotal = (100 / (mostSold / quantityOfBeer)).toFixed(2);
             let beerPercentage = (100 / (beerSold / quantityOfBeer)).toFixed(2);
             // toFixed IS USED TO GET ONLY 2 DECIMALS, NOT 1000
-            
-            beerTopBar.style.width = `${beerPercentage}%`;
+   
+            beerTopBar.style.width = `${beerPercentageTotal}%`;
             beerNameTop.textContent = e;
             beerQuantityTop.textContent = quantityOfBeer;
-            beerQuantityPercentage.textContent = beerPercentage;
+            // beerQuantityPercentage.textContent = beerPercentage;
             parentTop.appendChild(cloneTop);
         })
     })
