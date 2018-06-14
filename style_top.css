@@ -1,0 +1,55 @@
+#tops{
+    width: 80%;
+    display: block;
+    grid-area: tb;
+    padding: 20px;
+    background-color:  rgba(212, 212, 212, 0.582);
+    box-shadow: 3px 3px 5px rgba(122, 122, 122, 0.452);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+.top{
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+    margin: auto;   
+    font-size: 12px;
+}
+
+.topInfoDiv{
+    display: inline-block;
+    font-size: 14px;
+    margin-left: 10%;
+    margin-bottom: 3px;
+}
+
+.outerTopBar{
+    display: block;    
+    grid-area: bp;
+    width: 80%;
+    height: 20px;
+    background-color: white;
+    margin: auto;
+    padding: 0;
+    margin-left: 10%;
+    text-align: left;
+    border-radius: 20px;
+}
+
+.topBar{
+    margin: auto;
+    display: inline-block;    
+    width: 50%;
+    height: 20px;
+    border-radius: 20px;
+    background-color: rgb(187, 187, 187);
+}
+
+.outerTopBar p{
+    position: absolute;
+    text-indent: 30px;
+    margin: 1px;
+}

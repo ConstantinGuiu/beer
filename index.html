@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="http://petlatkea.dk/2018/front/foobar.js"></script>
+    <link rel="stylesheet" href="style_queue.css">
+    <link rel="stylesheet" href="style_kegs.css">
+    <link rel="stylesheet" href="style_taps.css">
+    <link rel="stylesheet" href="style_top.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="content">
+        <div id="content_status_persons">      
+            <h1 id="queue">People in queue: <span></span></h1>
+            <div id="bar">
+                <div id="toplayer">
+                    <div id="colored"></div>
+                </div>
+            </div>
+            <h1 id="served">Persons served: <span></span></h1>
+            <h1 id="beersSold">Total beers sold: <span></span></h1>
+            <div id="timeStatistics">
+                <h1>Persons who waited:</h1>
+                <img src="images/emojis/emoji_inlove.jpg" alt="" srcset=""><p id="lessThan5">less than 5 seconds: <span></span></p><br>
+                <img src="images/emojis/emoji_happy.jpg" alt="" srcset=""><p id="between5and15">between 5 and 15 seconds: <span></span></p><br>
+                <img src="images/emojis/emoji_angry.jpg" alt="" srcset=""><p id="between15and35">between 15 and 35 seconds: <span></span></p><br>
+                <img src="images/emojis/emoji_angry_red.jpg" alt="" srcset=""><p id="aLot">a lot: <span></span></p>
+            </div>
+            
+        </div> 
+
+        <div id="kegs">
+        </div>
+        
+        <div id="taps">
+        </div>
+
+        <div id="tops">
+        </div>
+        
+    </div>
+
+    <template id="bartenderTemplate">
+        <div class="bartender">
+            <div class="bartending">
+                <p><span id=bartenderNameSpan></span>'s status:<br><span id="bartenderStatusSpan"></span></p>
+                <img class="tap" src="/images/icons/bartender_working.jpg">
+            </div>
+        </div>
+    </template>
+
+    <template id="kegTemplate">
+        <div class="keg">
+            <div class="kegimg">
+                    <img class="fullkeg" src="/images/kegs/untitled_keg.png">
+                    <p>Liters left in the keg: <span></span>L</p>
+            </div>
+        </div>
+    </template>
+
+    <template id="topTemplate">
+            <div class="top">
+                <p class="topInfoDiv"><span class="beerNameSpan"></span>: <span class="beersSoldSpan"> beers sold</span></p>
+                <div class="outerTopBar">
+                    <p><span class="beerPercentageSpan"></span>%</p>
+                    <div class="topBar"></div>
+                </div>
+            </div>  
+    </template>
+
+    <script src="main.js"></script>
+</body>
+</html>

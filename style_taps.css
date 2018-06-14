@@ -1,0 +1,18 @@
+#taps{
+    display: block;
+    grid-area: tp;
+    text-align: center;
+}
+
+.bartender{
+    display: inline-block;
+    width: 30%;
+}
+
+.bartender p{
+    font-size: 15px;
+}
+
+.tap{
+    width: 75%;
+}

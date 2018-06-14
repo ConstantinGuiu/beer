@@ -1,0 +1,43 @@
+#content_status_persons{
+    background-color: rgba(212, 212, 212, 0.582);
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    margin: 20px auto;   
+    border-radius: 20px;
+    box-shadow: 3px 3px 5px rgba(122, 122, 122, 0.452);
+    font-size: 12px;
+    grid-area: qu;
+}
+
+#bar{
+    width: 25vw;
+    height: 15px;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 2px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#toplayer{
+    height: 15px;
+    overflow: hidden;
+    border-radius: 10px;
+    transition-duration: 1s;
+    width: 0%;
+}
+
+#colored{
+    width: 25vw;
+    height: 15px;
+    background: linear-gradient(-90deg, red, yellow, rgb(5, 206, 5), rgb(57, 139, 247));
+    display: block;
+}
+
+@media(min-width: 1100px){
+    
+    #bar{
+        width: 250px;
+    }
+}
