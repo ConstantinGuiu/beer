@@ -26,7 +26,7 @@ function getInfo(){
 
     // I USED JSON.parse() TO TRANSFORM THE DATA INTO A JASON
     let info = JSON.parse(FooBar.getData(true));
-    console.log(info);
+    // console.log(info);
     
     // SHOWING THE QUEUE
 
@@ -82,7 +82,7 @@ function getInfo(){
         parentKeg.appendChild(cloneKeg);
     });
 
-    // TOP BEER
+    // TOP BEER AND CUSTOMERS SATISFACTION
 
 
     info.serving.forEach(topBeer=>{
@@ -93,7 +93,7 @@ function getInfo(){
             let timeServed = info.timestamp;
             let timeStartQueue = topBeer.startTime;
             let timeSpent = ((timeServed - timeStartQueue)/1000).toFixed(0);
-
+            console.log(info);
             console.log(`customer ${customerID} spent `, timeSpent, `seconds`);
 
             if(timeSpent >= 0 && timeSpent <= 5){
